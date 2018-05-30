@@ -99,6 +99,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b4da8', end
 	width: 100%
 }
 .navbar .navbar-nav {
+	margin-left:15px;
 	display: inline-block;
 	float: none;
 	vertical-align: top;
@@ -130,7 +131,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b4da8', end
 	color: #aaa;
 }
 .navbar-custom .nav li a {
-	margin: 0 20px;
+	margin: 17px 20px;
+
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	-webkit-transition: background .3s ease-in-out;
@@ -613,6 +615,11 @@ header .intro-text {
 	padding-bottom: 150px;
 	padding-left:60px;
 }
+
+
+
+
+
 }
 
 @media (max-width: 1024px) {
@@ -950,33 +957,6 @@ form .stars span {
 	overflow: auto
 }
 
-/**
- * Lineas / Detalles
- -----------------------*//*
-.comments-list:before {
-	content: '';
-	width: 2px;
-	height: 100%;
-	background: #c7cacb;
-	position: absolute;
-	left: 32px;
-	top: 0;
-}
-
-.comments-list:after {
-	content: '';
-	position: absolute;
-	background: #c7cacb;
-	bottom: 0;
-	left: 27px;
-	width: 7px;
-	height: 7px;
-	border: 3px solid #dee1e3;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	border-radius: 50%;
-}*/
-
 .reply-list:before, .reply-list:after {display: none;}
 .reply-list li:before {
 	content: '';
@@ -1168,6 +1148,12 @@ form .stars span {
 	.reply-list .comment-box {
 		width: 320px;
 	}
+
+#img_cab
+{
+   padding-left:94px !important;
+   margin-right: 0px !important;
+}
 }
 
 @media only screen and (max-width: 991px) {
@@ -1333,6 +1319,17 @@ a.carousel-control.right { right: 0; background: none; border: 0;}
 .inputDnD .form-control-file:hover:before {
   border-style: solid;
   box-shadow: inset 0px 0px 0px 0.25em currentColor;
+}
+
+#img_cab
+{
+
+    height: 88px;
+    margin-top: 6px;
+    margin-left: -91px;
+    margin-right: 10px;
+    
+
 }
 
 
