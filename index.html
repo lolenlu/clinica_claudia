@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claudia Monteagudo</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Favicons
+    ================================================== -->
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+
+
+<!-- Angular -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css"  href="css/style.css">
+
+<link href='fonts/font-family-1.css' rel='stylesheet' type='text/css'>
+<link href='fonts/font-family-2.css' rel='stylesheet' type='text/css'>
+
+</head>
+
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" >
+<!-- Preloader -->
+<div class="se-pre-con"></div>
+
+
+
+<div id="nav">
+  <nav class="navbar navbar-custom">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"> <i class="fa fa-bars"></i> </button>
+      </div>
+      
+      
+      <div class="collapse navbar-collapse navbar-main-collapse">
+        <ul class="nav navbar-nav" id="panel">
+          
+          <li class="hidden"> <a href="#page-top"></a> </li>
+          <li> <a href="#page-top" id="iniciov" onclick="javascript:inicio()">Inicio</a> </li>
+          <li> <a href="#about" id="nosotros">Nosotros</a> </li>
+          <li> <a href="#skills" id="servicios">Servicios</a> </li>
+          <li> <a href="#portfolio" id="galeria">Galería</a> </li>
+          <li> <a href="#testimonials" id="opinion">Opinión</a> </li>
+          <li> <a href="#contact" id="contacto">Contacto</a> </li>
+          <button type="button" class="btn btn-primary" href="#" id="registro"> Registro</button>
+          <button type="button" class="btn btn-primary" href="#" id="login"> Acceder</button>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+
+
+<!-- Header -->
+<header id="header">
+  <div class="intro text-center">
+    <div class="overlay">
+      <div class="container" id="cuerpo_prin"  ng-controller='controlador' >
+        <div class="row">
+          <div class="intro-text">
+            
+            <img id="imagen-principal" src="img/logo.png">
+       
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+<div id="footer">
+  <div class="text-center">
+    <div>
+      <p>Copyright &copy; 2018 Claudia Monteagudo. Designed by Lorenzo José Castillo Monteagudo</p>
+    </div>
+    
+    <div class="social-net">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+              
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
+<script type="text/javascript" src="js/bootstrap.js"></script> 
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/about.js"></script>
+<script type="text/javascript" src="js/servicios.js"></script>
+<script type="text/javascript" src="js/gallery.js"></script>
+<script type="text/javascript" src="js/comentario.js"></script>
+<script type="text/javascript" src="js/app_comentario.js"></script>
+<script type="text/javascript" src="js/contacto.js"></script>
+<script type="text/javascript" src="js/registro.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/panel_usuario.js"></script>
+<script type="text/javascript" src="js/panel_admin_galeria.js"></script>
+
+</body>
+</html>
