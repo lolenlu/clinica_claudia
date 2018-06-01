@@ -41,10 +41,65 @@ $(".control-box").html("<a class='left carousel-control' href='#myCarousel' role
  $("#frmSubirImagen").append('<div class="form-group inputDnD"><input type="file" class="form-control-file text-info font-weight-bold" id="imagen" name="imagen" accept="image/*" onchange="javascript:readUrl(this)" data-title="Elegir imagen"></div><button type="submit" class="btn btn-info btn-block" id="sub_img" disabled>Añadir imagen a la Galería</button>');
 
            }
-        });
-
-      
+        });     
 }
+
+  function sub_imagen(){
+
+      var frmData = new FormData;
+      frmData.append('imagen',$("input[name=imagen]")[0].files[0]);
+
+      $.ajax({
+        url: "php/subir_imagen.php",
+        type: "POST",
+        data: frmData,
+        processData: false,
+        contentType: false,
+        cache: false,
+        success:function(data)
+        {
+            alert(data+" se ha subido correctamente.");
+            
+            document.getElementById("imagen").setAttribute("data-title", "Arrastra imagen");
+            $(".carousel-indicators").append("<li name='"+data+"' data-target='#myCarousel'></li>");
+            $(".carousel-inner").append("<div class='item' name='"+data+"'><img src='img/galeria/"+data+"' alt=''><button onclick='javascript:borrar_imagen()' name='bot_borr' type='button' class='btn btn-danger btn-block' value='"+data+"'>Eliminar</button></div>");
+            $(".carousel-indicators li").attr('class','');
+            $(".carousel-inner div").attr('class','item');
+            $("li[name='"+data+"']").attr('class','active');   
+            $("div[name='"+data+"']").attr('class','item active');
+            $("#sub_img").attr("disabled", true);
+            $("#frmSubirImagen").trigger("reset");
+        },
+        error:function()
+        {
+          alert("Parece que hubo un error al subir la imagen");
+        }
+      });
+      return false;    
+  }
+
+  function borrar_imagen(){
+   
+      var data_el=$("div [class='item active'] button").val();
+
+      $.ajax({
+        url: "php/eliminar_imagen.php",
+        type: "POST",
+        data: { "img_bor" : data_el },
+        cache: false,
+        success:function(data)
+        {  
+            alert(data+" se ha eliminado correctamente.");
+            $(".carousel-indicators li").attr('class','');
+            $(".carousel-inner div").attr('class','item');
+            $("li [name='img/galeria/"+data_el+"']").remove();
+            $("div [name='img/galeria/"+data_el+"']").remove();
+            $("#li_in").attr('class','active');
+            $("#div_in").attr('class','item active');
+        }
+      });
+      return false;    
+  }
 
 
           /*<button type="button" class="btn btn-warning btn-block col-sm-6 offset-sm-3" onclick="javascript:location.reload();">Guardar cambios y salir</button>
